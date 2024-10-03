@@ -1,1 +1,2 @@
-# E-commers-Webpage
+# E-commers-Webpage 
+A Simple Furniture Store 
