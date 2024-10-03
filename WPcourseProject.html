@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+<style>
+
+.food-munch-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.containerBackgroundAdded {
+    background-image: url("");
+    height: 100vh;
+    background-size: cover;
+}
+
+.textEdit {
+    font-family: "serif";
+    font-weight: bold;
+}
+
+.headingElement {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#navItem1 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+#navItem2 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+#navItem3 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+#navItem4 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+.banner-section-bg-container {
+    background-image: url("https://img.freepik.com/free-photo/retro-living-room-interior-design_53876-145503.jpg?size=626&ext=jpg&ga=GA1.1.1395880969.1709683200&semt=ais");
+    height: 100vh;
+    background-size: cover;
+}
+
+.banner-heading {
+    color: white;
+    font-family: "Roboto";
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.banner-caption {
+    color: #f5f7fa;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.custom-button {
+    color: white;
+    background-image: linear-gradient(#d0b200, #a58d00);
+    width: 130px;
+    height: 45px;
+    border-width: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.custom-outline-button {
+    color: #d0b200;
+    background-color: transparent;
+    width: 130px;
+    height: 45px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d0b200;
+    border-radius: 8px;
+}
+
+.wcu-section {
+    background-color: #f9fbfe;
+}
+
+.wcu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.wcu-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.wcu-card {
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5eaf4;
+    border-radius: 16px;
+}
+
+.wcu-card-image {
+    width: 87px;
+    height: 90px;
+}
+
+.wcu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.wcu-card-description {
+    color: #7b8794;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.offers {
+    color: #323f4b;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.explore-menu-section {
+    background-color: white;
+}
+
+.menu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.menu-item-image {
+    border-radius: 16px;
+}
+
+.menu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.menu-item-link {
+    color: #d0b200;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu-item-card {
+    border-radius: 16px;
+    transform: scale(0);
+    animation: popIn 2s ease-in-out forwards;
+}
+
+.ww {
+    transform: scale(0);
+    animation: popIn 2s ease-in-out forwards;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.healthy-food-section {
+    background-color: #f9fbfe;
+}
+
+.healthy-food-section-img {
+    width: 270px;
+}
+
+.healthy-food-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.healthy-food-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.delivery-and-payment-section {
+    background-color: white;
+}
+
+.delivery-and-payment-section-img {
+    width: 270px;
+}
+
+.delivery-and-payment-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.delivery-and-payment-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.payment-card-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 28px;
+}
+
+.thanking-customers-section {
+    background-image: radial-gradient(#fff8db, #fae38c);
+}
+
+.thanking-customers-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.thanking-customers-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.thanking-customers-section-img {
+    width: 270px;
+    margin-bottom: 20px;
+}
+
+.thanking-customers-section-modal-title {
+    color: #d0b200;
+    font-weight: 800;
+}
+
+.follow-us-section {
+    background-color: white;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 22px;
+}
+
+.icon {
+    color: #d0b200;
+    font-size: 35px;
+}
+
+.footer-section {
+    background-color: #0d2436;
+}
+
+.footer-section-mail-id {
+    color: #959ead;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-section-address {
+    color: #959ead;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+    <div id="mainContaier">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex flex-row" href="#">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+                    <h1 class="headingElement">Classic <br>Furnitures</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" id="navItem1" href="#wcuSection">
+                            Why Choose Us?
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        <a class="nav-link" href="#exploreMenuSection" id="navItem2">Explore Menu</a>
+                        <a class="nav-link" href="#deliveryPaymentSection" id="navItem3">Delivery & Payment</a>
+                        <a class="nav-link" href="#followUsSection" id="navItem4">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+            <div class="text-center">
+                <h1 class="banner-heading mb-3"><span class="textEdit">Elevate Your Comfort Zone</span></h1>
+                <p class="banner-caption mb-4"><span class="textEdit">Simplify, Style, Surround.</span></p>
+                <button class="custom-button">View Menu</button>
+                <button class="custom-outline-button">Order Now</button>
+            </div>
+        </div>
+        <div class="wcu-section pt-5 pb-5" id="wcuSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="wcu-section-heading">Why Choose Us?</h1>
+                        <p class="wcu-section-description">
+                            We offer you good built-in quality, warrenty on every product that you buy in our store with free service upto 1 year.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-4 ww">
+                        <div class="wcu-card p-3 mb-3">
+                            <img src="https://static.vecteezy.com/system/resources/previews/025/437/715/original/sofa-icon-logo-design-logo-design-template-logo-with-abstract-shape-free-vector.jpg" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">Services</h1>
+                            <p class="wcu-card-description">
+                                Experience fine dining at the comfort of your home. All our
+                                orders are carefully packed and arranged to give you the nothing
+                                less than perfect.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 ww">
+                        <div class="wcu-card p-3 mb-3">
+                            <img src="https://media.istockphoto.com/id/1179956017/vector/double-bed-vector-icon-for-graphic-design-logo.jpg?s=170667a&w=0&k=20&c=2XmyA4qVFFdSfJfe-Js2ARVeCflQMd48DT8-wqvLhhA=" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">Customized Furniture</h1>
+                            <p class="wcu-card-description">
+                                We offer you a special faciliity to customize the furniture in your own requirements and considerations.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 ww">
+                        <div class="wcu-card p-3 mb-3">
+                            <img src="https://i.pinimg.com/736x/20/7d/fa/207dfae2b452e49dad9b9696b57a91a1.jpg" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">Best Offers</h1>
+                            <p class="wcu-card-description">
+                                Coupons & Offers upto
+                                <span class="offers">50% OFF</span>
+                                and Exclusive Promo Codes on All Online Furniture Orders.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="exploreMenuSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Explore Menu</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://images.woodenstreet.de/image/cache/data%2Fwooden-sofa%2Fregina-wooden-sofa%2Fupdated%2Findigo-blue%2Fupdated%2F4-810x702.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Wodden Couch</h1>
+                            <a href="#woodenCouchContainer" class="menu-item-link">
+                                <button class="btn btn-info" onclick="woodenCouchOnclick()">View All</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://c0.wallpaperflare.com/preview/757/997/301/square-brown-and-black-wooden-patio-dining-table-surrounded-by-dining-chairs.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Dining Table</h1>
+                            <a href="#dinningTableContainer" class="menu-item-link">
+                                <button class="btn btn-info" onclick="dinningTableOnclick()">View All</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://w0.peakpx.com/wallpaper/138/432/HD-wallpaper-stylish-interior-bedroom-gray-in-the-bedroom-loft-style-black-walls-in-the-bedroom-modern-interior-design-modern-style-bedroom-project-thumbnail.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Bed</h1>
+                            <a href="#bedContainer" class="menu-item-link">
+                                <button class="btn btn-info" onclick="bedOnclick()">View All</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2021/1/IV/YK/SN/112037232/luxury-sofa-set.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Sofa</h1>
+                            <a href="#sofaContainer" class="menu-item-link">
+                                <button class="btn btn-info" onclick="sofaOnclick()">View All</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://lepakshifurnitures.com/admin/uploads/product/size_extra_large/2f21f4d0d877f923bade599ba884109d.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Dressing Table</h1>
+                            <a href="#dressingTableContainer" class="menu-item-link">
+                                <button class="btn btn-info" onclick="dressingTableOnclick()">View All</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://img.freepik.com/free-vector/wooden-doors-design-icon-set_1284-21226.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Doors</h1>
+                            <a href="#doorsContainer" class="menu-item-link">
+                                <button class="btn btn-info" onclick="doorsOnclick()">View All</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://img1.exportersindia.com/product_images/bc-full/2020/1/4601543/modular-wardrobe-1578387449-5241562.jpeg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Cupboards</h1>
+                            <a href="#cupboardsContainer" class="menu-item-link">
+                                <button class="btn btn-info" onclick="cupboardsContainerOnclick()">View All</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://img.freepik.com/premium-photo/modern-living-room-with-table-matching-furniture-bathed-natural-light-from-wide-windows-generative-ai_175880-2944.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Windows</h1>
+                            <a href="#windowsContainer" class="menu-item-link">
+                                <button class="btn btn-info" onclick="windowsContainerOnclick()">View All</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-and-payment-section pt-5 pb-5" id="deliveryPaymentSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-5 order-1 order-md-2">
+                        <div class="text-center">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/delivery-payment-section-img.png" class="delivery-and-payment-section-img" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7 order-2 order-md-1">
+                        <h1 class="delivery-and-payment-section-heading">
+                            Delivery and Payment
+                        </h1>
+                        <p class="delivery-and-payment-section-description">
+                            Enjoy hassle-free payment with the plenitude of payment options
+                            available for you. Get live tracking and locate your food on a
+                            live map. It's quite a sight to see your food arrive to your door.
+                            Plus, you get a 5% discount on every order every time you pay
+                            online.
+                        </p>
+                        <button class="custom-button">Order Now</button>
+                        <div class="mt-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/visa-card-img.png" class="payment-card-img" />
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/master-card-img.png" class="payment-card-img" />
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/paypal-card-img.png" class="payment-card-img" />
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/american-express-img.png" class="payment-card-img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thanking-customers-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                        <h1 class="thanking-customers-section-heading">
+                            Thank you for being a valuable customer to us.
+                        </h1>
+                        <p class="thanking-customers-section-description">
+                            We have a surprise gift for you
+                        </p>
+                        <div class="d-md-none">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                        </div>
+                        <div>
+                            <button type="button" class="custom-button" data-toggle="modal" data-target="#exampleModal">
+                                Redeem Gift
+                            </button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog mt-5">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title thanking-customers-section-modal-title" id="exampleModalLabel">
+                                                Gift Voucher
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/gift-voucher-img.png" class="w-100" />
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 d-none d-md-block">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="follow-us-section-heading">Follow Us</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-twitter icon"></i>
+                            </div>
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-instagram icon"></i>
+                            </div>
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-facebook icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+                        <h1 class="footer-section-mail-id">orderFurniture@ClassicFurnitures</h1>
+                        <p class="footer-section-address">
+                            123 Maduranagar, Arcadia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-none containerBackgroundAdded" id="woodenCouchContainer">
+        <div class="d-flex flex-row m-2">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+            <h1 class="headingElement">Classic <br>Furnitures</h1>
+        </div>
+        <div class="d-flex flex-row">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://gustobene.com/cdn/shop/products/product-image-1392230359.jpg?v=1594566530" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://www.ulcdn.net/opt/www.ulcdn.net/images/products/719897/sofa_listing/FNSF51TKPB3_-_main_1.jpg?1673440225" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://www.ulcdn.net/images/products/352313/sofa_listing/FNSF51RTGO3_-_main_1.png?1626097466" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://thelivingspacefurniture.com/wp-content/uploads/2021/08/1.png" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary" onclick="WoodenCouchbackOnclick()">Back</button>
+        </div>
+    </div>
+    <div class="d-none containerBackgroundAdded" id="dinningTableContainer">
+        <div class="d-flex flex-row m-2">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+            <h1 class="headingElement">Classic <br>Furnitures</h1>
+        </div>
+        <div class="d-flex flex-row">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://aarsunwoods.com/wp-content/uploads/2020/03/Victorian-Style-Dining-Set-10-Seater-UH-DNG-0026-B.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://4.imimg.com/data4/FD/CQ/ANDROID-25934090/product.jpeg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://cdn11.bigcommerce.com/s-41cl3vceee/images/stencil/1280x1280/products/857/9000/classic_with_kennebec__23755.1578974256.jpg?c=2" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://assets.bolia.com/cdn-cgi/image/fit=cover,width=500,format=auto,gravity=0.55x1.00,height=383,quality=81/globalassets/media/4.-collections/fy23/miljo-fy23ss/dining-room/ronya-kite-case-aluna-forma-arcs-torch.jpg?v=1063522558" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary" onclick="dinningBackOnclick()">Back</button>
+        </div>
+    </div>
+    <div class="d-none containerBackgroundAdded" id="bedContainer">
+        <div class="d-flex flex-row m-2">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+            <h1 class="headingElement">Classic <br>Furnitures</h1>
+        </div>
+        <div class="d-flex flex-row">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://img.freepik.com/premium-photo/luxury-bedroom-light-colors-with-golden-furniture-details-big-comfortable-double-royal-bed-elegant-classic-interior_99272-1597.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/424/27/651/bedroom-bed-style-interior-wallpaper-preview.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://h8p6t4n6.rocketcdn.me/wp-content/uploads/2018/02/Moduluxe35inPlinthBaseBedClapboardHdbdBoxNS24inWideEnvironmentNarrow.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThhTmo2oiZKW1SOatUVLt_CToMgAUwETNwnfmNhA2vluVkYAnHAqxVicU3Gkgm_xoSllY&usqp=CAU" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary" onclick="bedBackOnclick()">Back</button>
+        </div>
+    </div>
+    <div class="d-none containerBackgroundAdded" id="sofaContainer">
+        <div class="d-flex flex-row m-2">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+            <h1 class="headingElement">Classic <br>Furnitures</h1>
+        </div>
+        <div class="d-flex flex-row">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://m.media-amazon.com/images/I/51hN3zrRzgL.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://i.pinimg.com/originals/ef/a3/42/efa342c4aa268fc170ecf433026d9b8e.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://img.staticmb.com/mbcontent/images/crop/uploads/2023/10/wooden-sofa-design-for-living-room_0_1200.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://5.imimg.com/data5/NC/CL/LV/ANDROID-62331427/product-jpeg.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary" onclick="sofaBackOnclick()">Back</button>
+        </div>
+    </div>
+    <div class="d-none containerBackgroundAdded" id="dressingTableContainer">
+        <div class="d-flex flex-row m-2">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+            <h1 class="headingElement">Classic <br>Furnitures</h1>
+        </div>
+        <div class="d-flex flex-row">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://i.pinimg.com/736x/1e/f2/4e/1ef24ed04e8e35032e658ecb6bbb08c4.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://shop.gkwretail.com/cdn/shop/articles/Dressing_Table_Design.jpg?v=1663056588&width=1100" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://cdn.shopify.com/s/files/1/0096/4594/9013/files/Dressing_Table_Design_Dressing_Table_New_Design_Wardrobe_With_Dressing_Table-32.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://cdn.shopify.com/s/files/1/0096/4594/9013/files/Dressing_Table_Design_Dressing_Table_New_Design_Wardrobe_With_Dressing_Table-36.jpg?v=1651399655" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary" onclick="dressingTableBackOnclick()">Back</button>
+        </div>
+    </div>
+    <div class="d-none containerBackgroundAdded" id="doorsContainer">
+        <div class="d-flex flex-row m-2">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+            <h1 class="headingElement">Classic <br>Furnitures</h1>
+        </div>
+        <div class="d-flex flex-row">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://cdn.wallpapersafari.com/88/13/WvU6zQ.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://girlycraft.com/wp-content/uploads/2023/07/main-door-wood-design.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://aarsunwoods.com/wp-content/uploads/2023/03/Teak-Wood-Double-Door-Design-jpg.webp" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://aarsunwoods.com/wp-content/uploads/2023/02/Interior-Wood-Double-Door-jpg.webp" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary" onclick="doorsBackOnclick()">Back</button>
+        </div>
+    </div>
+    <div class="d-none containerBackgroundAdded" id="cupboardsContainer">
+        <div class="d-flex flex-row m-2">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+            <h1 class="headingElement">Classic <br>Furnitures</h1>
+        </div>
+        <div class="d-flex flex-row">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/46/853/245/brown-cabinet-closet-dark-wallpaper-preview.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://i.pinimg.com/736x/0e/1b/ec/0e1bec328257e7ebb5dec6d5917a58f7.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/gallery/bedroom/a-modern-bedroom-cupboard-design-with-multiple-options-for-storage/hw_071_hr_d.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://shop.gkwretail.com/cdn/shop/articles/Wardrobe_Design.jpg?v=1663061696&width=1920" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary" onclick="cupboardsBackOnclick()">Back</button>
+        </div>
+    </div>
+    <div class="d-none containerBackgroundAdded" id="windowsContainer">
+        <div class="d-flex flex-row m-2">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmOGNqRKXWkMMasu-HZBIlT9ovRWQoSrE24g88zarYtgIk9IiUO0TcfyZpi6AyqJ-0PC4aj7hT-UVzlWH3vsQQRwub4WL2VULinHQjINKvht4B3MOxRbJBHQz_TilOs-GwWFbntszSrjIdYiXzozev7mLLrPA2qhkc4rwoivex5sFPJysboivblPLKxXpT/s3464/Picsart_24-03-06_18-38-11-041.png" class="food-munch-logo" />
+            <h1 class="headingElement">Classic <br>Furnitures</h1>
+        </div>
+        <div class="d-flex flex-row">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://media.istockphoto.com/id/92450205/photo/sunsplashed-window.jpg?s=612x612&w=0&k=20&c=dTuhETbiWnoxAR1Ek5ROlj0liKxBazb14d9rsfe4XTc=" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://aparnavenster.com/wp-content/uploads/2019/01/Website-Sliding-window-492x304.png" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://www.99acres.com/microsite/articles/files/2022/06/uPVC-windows.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://img.staticmb.com/mbcontent/images/crop/uploads/2020/12/window-grills-with-gardening-space_0_1200.jpg" class="menu-item-image w-100" />
+                    <a href="" class="menu-item-link">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary" onclick="windowsBackOnclick()">Back</button>
+        </div>
+    </div>
+<script>
+function WoodenCouchbackOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    let woodenCouchContainer = document.getElementById("woodenCouchContainer");
+    mainContainer.classList.remove("d-none");
+    woodenCouchContainer.classList.remove("d-block");
+    woodenCouchContainer.classList.add("d-none");
+}
+
+function windowsBackOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    mainContainer.classList.remove("d-none");
+    let windowContainer = document.getElementById("windowsContainer");
+    windowContainer.classList.remove("d-block");
+    windowContainer.classList.add("d-none");
+}
+
+function cupboardsBackOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    mainContainer.classList.remove("d-none");
+    let cupboardContainer = document.getElementById("cupboardsContainer");
+    cupboardContainer.classList.remove("d-block");
+    cupboardContainer.classList.add("d-none");
+}
+
+function doorsBackOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    mainContainer.classList.remove("d-none");
+    let doorsContainer = document.getElementById("doorsContainer");
+    doorsContainer.classList.remove("d-block");
+    doorsContainer.classList.add("d-none");
+}
+
+function dressingTableBackOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    let dressingTableCntainer = document.getElementById("dressingTableContainer");
+    dressingTableCntainer.classList.remove("d-block");
+    dressingTableCntainer.classList.add("d-none");
+    mainContainer.classList.remove("d-none");
+}
+
+function bedBackOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    let bedContainer = document.getElementById("bedContainer");
+    mainContainer.classList.remove("d-none");
+    bedContainer.classList.remove("d-block");
+    bedContainer.classList.add("d-none");
+}
+
+function sofaBackOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    let sofaContainer = document.getElementById("sofaContainer");
+    sofaContainer.classList.add("d-none");
+    sofaContainer.classList.remove("d-block");
+    mainContainer.classList.remove("d-none");
+}
+
+function dinningBackOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    let dinningContainer = document.getElementById("dinningTableContainer");
+    mainContainer.classList.remove("d-none");
+    dinningContainer.classList.remove("d-block");
+    dinningContainer.classList.add("d-none");
+}
+
+function woodenCouchOnclick() {
+    let woodenCouchContainer = document.getElementById("woodenCouchContainer");
+    let mainContainer = document.getElementById("mainContaier");
+    woodenCouchContainer.classList.remove("d-none");
+    woodenCouchContainer.classList.add("d-block");
+    mainContainer.classList.add("d-none");
+}
+
+function windowsContainerOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    mainContainer.classList.add("d-none");
+    let windowContainer = document.getElementById("windowsContainer");
+    windowContainer.classList.remove("d-none");
+    windowContainer.classList.add("d-block");
+}
+
+function cupboardsContainerOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    mainContainer.classList.add("d-none");
+    let cupboardContainer = document.getElementById("cupboardsContainer");
+    cupboardContainer.classList.add("d-block");
+    cupboardContainer.classList.remove("d-none");
+}
+
+function bedOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    let bedContainer = document.getElementById("bedContainer");
+    bedContainer.classList.remove("d-none");
+    bedContainer.classList.add("d-block");
+    mainContainer.classList.add("d-none");
+
+}
+
+function sofaOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    mainContainer.classList.add("d-none");
+    let sofaContainer = document.getElementById("sofaContainer");
+    sofaContainer.classList.remove("d-none");
+    sofaContainer.classList.add("d-block");
+}
+
+function doorsOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    mainContainer.classList.add("d-none");
+    let doorsContainer = document.getElementById("doorsContainer");
+    doorsContainer.classList.remove("d-none");
+    doorsContainer.classList.add("d-block");
+}
+
+function dressingTableOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    mainContainer.classList.add("d-none");
+    let dressingTableCntainer = document.getElementById("dressingTableContainer");
+    dressingTableCntainer.classList.remove("d-none");
+    dressingTableCntainer.classList.add("d-block");
+}
+
+function dinningTableOnclick() {
+    let mainContainer = document.getElementById("mainContaier");
+    let dinningContainer = document.getElementById("dinningTableContainer");
+    dinningContainer.classList.remove("d-none");
+    dinningContainer.classList.add("d-block");
+    mainContainer.classList.add("d-none");
+}
+</script>
+</body>
+
+
+
+</html>
